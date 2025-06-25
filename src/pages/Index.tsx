@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
-  Building2,
   HardHat,
   Ruler,
   Shield,
@@ -20,60 +19,11 @@ import {
   Building,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="bg-primary text-primary-foreground shadow-lg">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <Building2 className="h-8 w-8 text-secondary" />
-              <div>
-                <h1 className="text-2xl font-bold">BARO</h1>
-                <p className="text-sm text-primary-foreground/80">
-                  Construcciones SRL
-                </p>
-              </div>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="hover:text-secondary transition-colors">
-                Inicio
-              </Link>
-              <Link
-                to="/servicios"
-                className="hover:text-secondary transition-colors"
-              >
-                Servicios
-              </Link>
-              <Link
-                to="/proyectos"
-                className="hover:text-secondary transition-colors"
-              >
-                Proyectos
-              </Link>
-              <Link
-                to="/nosotros"
-                className="hover:text-secondary transition-colors"
-              >
-                Nosotros
-              </Link>
-              <Link
-                to="/contacto"
-                className="hover:text-secondary transition-colors"
-              >
-                Contacto
-              </Link>
-            </div>
-            <Button variant="secondary" size="sm">
-              <Phone className="h-4 w-4 mr-2" />
-              Contactar
-            </Button>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary to-primary/90 text-primary-foreground py-20 lg:py-32">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -374,7 +324,7 @@ const Index = () => {
 
                   <div className="text-center">
                     <div className="bg-secondary p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Building2 className="h-8 w-8 text-white" />
+                      <Building className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold text-secondary">100%</h3>
                     <p className="text-primary-foreground/80">
@@ -458,7 +408,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <Building2 className="h-8 w-8 text-secondary" />
+                <Building className="h-8 w-8 text-secondary" />
                 <div>
                   <h1 className="text-2xl font-bold">BARO</h1>
                   <p className="text-sm text-primary-foreground/80">

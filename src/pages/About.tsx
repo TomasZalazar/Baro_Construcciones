@@ -125,53 +125,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="bg-primary text-primary-foreground shadow-lg">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-3">
-              <Building2 className="h-8 w-8 text-secondary" />
-              <div>
-                <h1 className="text-2xl font-bold">BARO</h1>
-                <p className="text-sm text-primary-foreground/80">
-                  Construcciones SRL
-                </p>
-              </div>
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="hover:text-secondary transition-colors">
-                Inicio
-              </Link>
-              <Link
-                to="/servicios"
-                className="hover:text-secondary transition-colors"
-              >
-                Servicios
-              </Link>
-              <Link
-                to="/proyectos"
-                className="hover:text-secondary transition-colors"
-              >
-                Proyectos
-              </Link>
-              <Link to="/nosotros" className="text-secondary font-medium">
-                Nosotros
-              </Link>
-              <Link
-                to="/contacto"
-                className="hover:text-secondary transition-colors"
-              >
-                Contacto
-              </Link>
-            </div>
-            <Button variant="secondary" size="sm">
-              <Phone className="h-4 w-4 mr-2" />
-              Contactar
-            </Button>
-          </div>
-        </div>
-      </nav>
-
       {/* Breadcrumb */}
       <div className="bg-muted/30 py-4">
         <div className="container mx-auto px-6">
