@@ -47,12 +47,21 @@ const Index = () => {
                 <ChevronRight className="h-5 w-5 ml-2" />
               </Button>
               <Button
+                asChild
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="text-lg px-8 border-primary-foreground text-muted-foreground hover:bg-background-foreground hover:text-muted-foreground"
               >
-                <Phone className="h-5 w-5 mr-2" />
-                +54 264 511-7015
+                <a
+                  href="https://wa.me/542645117015"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Contactar por WhatsApp"
+                  className="flex items-center"
+                >
+                  <Phone className="h-5 w-5 mr-2 text-muted-foreground" />
+                  +54 264 511-7015
+                </a>
               </Button>
             </div>
           </div>

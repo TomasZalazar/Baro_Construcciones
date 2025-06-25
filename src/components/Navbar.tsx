@@ -10,15 +10,18 @@ const Navbar = () => {
     <nav className="bg-primary text-primary-foreground shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-3 flex-shrink-0">
-          <Building className="h-8 w-8 text-secondary" />
+        <Link
+          to="/"
+          className="flex items-center space-x-3 flex-shrink-0 group focus:outline-none cursor-pointer"
+        >
+          <Building className="h-8 w-8 text-secondary group-hover:scale-110 transition-transform" />
           <div>
             <h1 className="text-2xl font-bold">BARO</h1>
             <p className="text-sm text-primary-foreground/80">
               Construcciones SRL
             </p>
           </div>
-        </div>
+        </Link>
         {/* Burger */}
         <div className="md:hidden">
           <button
