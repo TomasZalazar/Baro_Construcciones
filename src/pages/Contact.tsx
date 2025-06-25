@@ -32,24 +32,8 @@ import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Breadcrumb */}
-      <div className="bg-muted/30 py-4">
-        <div className="container mx-auto px-6">
-          <div className="flex items-center space-x-2 text-sm">
-            <Link
-              to="/"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Home className="h-4 w-4" />
-            </Link>
-            <ChevronRight className="h-4 w-4 text-muted-foreground" />
-            <span className="font-medium">Contacto</span>
-          </div>
-        </div>
-      </div>
-
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-primary/90 text-primary-foreground">
+      <section id="contact-hero" className="py-20 bg-gradient-to-br from-primary to-primary/90 text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-secondary/20 text-secondary border-secondary/30">
@@ -69,7 +53,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20">
+      <section id="contact-info" className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <Card className="text-center p-8 hover:shadow-lg transition-all duration-300">
@@ -145,7 +129,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 bg-muted/30">
+      <section id="contact-form" className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
@@ -334,7 +318,7 @@ const Contact = () => {
       </section>
 
       {/* Services Quick Access */}
-      <section className="py-20">
+      <section id="contact-servicios" className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -415,7 +399,7 @@ const Contact = () => {
       </section>
 
       {/* Emergency Contact */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section id="contact-emergencia" className="py-32 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -439,112 +423,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <Link to="/" className="flex items-center space-x-3 mb-6">
-                <Building2 className="h-8 w-8 text-secondary" />
-                <div>
-                  <h1 className="text-2xl font-bold">BARO</h1>
-                  <p className="text-sm text-primary-foreground/80">
-                    Construcciones SRL
-                  </p>
-                </div>
-              </Link>
-              <p className="text-primary-foreground/80 mb-6 max-w-md">
-                Especialistas en construcciones civiles, agrimensura y proyectos
-                arquitectónicos. Más de 20 años construyendo el futuro de San
-                Juan.
-              </p>
-              <div className="flex space-x-4">
-                <Button size="sm" variant="secondary">
-                  <Phone className="h-4 w-4 mr-2" />
-                  Contactar
-                </Button>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Servicios</h3>
-              <ul className="space-y-2 text-primary-foreground/80">
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Obras Civiles
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Agrimensura
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Refacciones
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Construcciones Provider
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Empresa</h3>
-              <ul className="space-y-2 text-primary-foreground/80">
-                <li>
-                  <Link
-                    to="/nosotros"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/proyectos"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Proyectos
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contacto"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Contacto
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <Separator className="my-8 bg-primary-foreground/20" />
-
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-primary-foreground/60 text-sm">
-              © 2024 Baro Construcciones SRL. Todos los derechos reservados.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

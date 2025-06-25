@@ -125,24 +125,8 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Breadcrumb */}
-      <div className="bg-muted/30 py-4">
-        <div className="container mx-auto px-6">
-          <div className="flex items-center space-x-2 text-sm">
-            <Link
-              to="/"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Home className="h-4 w-4" />
-            </Link>
-            <ChevronRight className="h-4 w-4 text-muted-foreground" />
-            <span className="font-medium">Nosotros</span>
-          </div>
-        </div>
-      </div>
-
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-primary/90 text-primary-foreground">
+      <section id="about-hero" className="py-20 bg-gradient-to-br from-primary to-primary/90 text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-secondary/20 text-secondary border-secondary/30">
@@ -150,7 +134,7 @@ const About = () => {
               Conoce Nuestro Equipo
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Más de 20 años construyendo
+              Más de 7 años construyendo
               <span className="text-secondary block">confianza</span>
             </h1>
             <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90">
@@ -163,7 +147,7 @@ const About = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-20">
+      <section id="about-mision-vision-valores" className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-12">
             <Card className="text-center p-8">
@@ -208,7 +192,7 @@ const About = () => {
       </section>
 
       {/* Company History */}
-      <section className="py-20 bg-muted/30">
+      <section id="about-historia" className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -241,7 +225,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20">
+      <section id="about-valores" className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -273,7 +257,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-muted/30">
+      <section id="about-equipo" className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -316,7 +300,7 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section id="about-numeros" className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -367,18 +351,16 @@ const About = () => {
       </section>
 
       {/* Location Section */}
-      <section className="py-20">
+      <section id="about-ubicacion" className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Nuestra Ubicación
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Nos encontramos estratégicamente ubicados en el corazón de San
-              Juan para brindar un mejor servicio.
+              Nos encontramos estratégicamente ubicados en el corazón de San Juan para brindar un mejor servicio.
             </p>
           </div>
-
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-semibold mb-6">
@@ -424,16 +406,24 @@ const About = () => {
                 </Button>
               </div>
             </div>
-
-            <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center">
-              <MapPin className="h-32 w-32 text-primary/30" />
+            <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.2367377640244!2d-68.53820275562661!3d-31.52513525511973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968141e72a7a0545%3A0xb7bee047265e9995!2sBARO%20Construcciones%20SRL!5e0!3m2!1ses!2sar!4v1750828823454!5m2!1ses!2sar"
+                width="100%"
+                height="350"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación BARO Construcciones SRL"
+              ></iframe>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
+      <section id="about-cta" className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6">
@@ -457,112 +447,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <Link to="/" className="flex items-center space-x-3 mb-6">
-                <Building2 className="h-8 w-8 text-secondary" />
-                <div>
-                  <h1 className="text-2xl font-bold">BARO</h1>
-                  <p className="text-sm text-primary-foreground/80">
-                    Construcciones SRL
-                  </p>
-                </div>
-              </Link>
-              <p className="text-primary-foreground/80 mb-6 max-w-md">
-                Especialistas en construcciones civiles, agrimensura y proyectos
-                arquitectónicos. Más de 20 años construyendo el futuro de San
-                Juan.
-              </p>
-              <div className="flex space-x-4">
-                <Button size="sm" variant="secondary">
-                  <Phone className="h-4 w-4 mr-2" />
-                  Contactar
-                </Button>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Servicios</h3>
-              <ul className="space-y-2 text-primary-foreground/80">
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Obras Civiles
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Agrimensura
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Refacciones
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Construcciones Provider
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Empresa</h3>
-              <ul className="space-y-2 text-primary-foreground/80">
-                <li>
-                  <Link
-                    to="/nosotros"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/proyectos"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Proyectos
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contacto"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Contacto
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <Separator className="my-8 bg-primary-foreground/20" />
-
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-primary-foreground/60 text-sm">
-              © 2025 Baro Construcciones SRL. Todos los derechos reservados.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

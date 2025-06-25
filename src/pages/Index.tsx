@@ -22,16 +22,29 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Index = () => {
+  // Scroll helpers para anclas
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary to-primary/90 text-primary-foreground py-20 lg:py-32">
+      <section
+        id="hero"
+        className="relative bg-gradient-to-br from-primary to-primary/90 text-primary-foreground py-20 lg:py-32"
+      >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl">
             <Badge className="mb-6 bg-secondary/20 text-secondary border-secondary/30">
               <HardHat className="h-4 w-4 mr-2" />
-              Más de 20 años de experiencia
+              Más de 7 años construyendo confianza
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
               Construimos el futuro de la
@@ -69,7 +82,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-muted/30">
+      <section id="servicios" className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
@@ -159,7 +172,7 @@ const Index = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20">
+      <section id="proyectos" className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
@@ -245,7 +258,7 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section id="nosotros" className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -253,7 +266,7 @@ const Index = () => {
                 ¿Por qué elegirnos?
               </Badge>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                Más de 20 años construyendo confianza
+                Más de 7 años construyendo confianza
               </h2>
               <p className="text-xl mb-8 text-primary-foreground/90">
                 Somos líderes en el sector constructor con un equipo de
@@ -325,7 +338,7 @@ const Index = () => {
                     <div className="bg-secondary p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                       <Award className="h-8 w-8 text-white" />
                     </div>
-                    <h3 className="text-3xl font-bold text-secondary">20+</h3>
+                    <h3 className="text-3xl font-bold text-secondary">7+</h3>
                     <p className="text-primary-foreground/80">
                       Años de Experiencia
                     </p>
@@ -356,7 +369,7 @@ const Index = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-muted/30">
+      <section id="contacto" className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6">
@@ -410,126 +423,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <Building className="h-8 w-8 text-secondary" />
-                <div>
-                  <h1 className="text-2xl font-bold">BARO</h1>
-                  <p className="text-sm text-primary-foreground/80">
-                    Construcciones SRL
-                  </p>
-                </div>
-              </div>
-              <p className="text-primary-foreground/80 mb-6 max-w-md">
-                Especialistas en construcciones civiles, agrimensura y proyectos
-                arquitectónicos. Más de 20 años construyendo el futuro de San
-                Juan.
-              </p>
-              <div className="flex space-x-4">
-                <Button size="sm" variant="secondary">
-                  <Phone className="h-4 w-4 mr-2" />
-                  Contactar
-                </Button>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Servicios</h3>
-              <ul className="space-y-2 text-primary-foreground/80">
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Obras Civiles
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Agrimensura
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Refacciones
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/servicios"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Construcciones Provider
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Empresa</h3>
-              <ul className="space-y-2 text-primary-foreground/80">
-                <li>
-                  <Link
-                    to="/nosotros"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/proyectos"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Proyectos
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contacto"
-                    className="hover:text-secondary transition-colors"
-                  >
-                    Contacto
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <Separator className="my-8 bg-primary-foreground/20" />
-
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-primary-foreground/60 text-sm">
-              © 2024 Baro Construcciones SRL. Todos los derechos reservados.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link
-                to="/privacidad"
-                className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors"
-              >
-                Política de Privacidad
-              </Link>
-              <Link
-                to="/terminos"
-                className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors"
-              >
-                Términos de Uso
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
